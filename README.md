@@ -1,58 +1,80 @@
 # Acervo Sonoro
 
-Acervo Sonoro é uma proposta de página única dedicada à música alternativa, com um catálogo de álbuns e uma seção de bandas em destaque. A seleção inclui artistas como Soundgarden, Queens of the Stone Age, Deftones e Julie. O projeto faz parte do Trabalho de Conclusão da Disciplina e será desenvolvido com React, TypeScript e Tailwind CSS.
+O **Acervo Sonoro** é uma página única dedicada à música alternativa. A interface apresenta um catálogo de álbuns e uma seção de bandas em destaque, com foco em uma organização simples, responsiva e inspirada em um acervo musical.
 
-**Etapa atual:** Fase 1 — planejamento da interface e criação dos wireframes.
+**Etapa atual:** Fase 2 — construção da página com React, TypeScript, JSX e CSS.
 
 ## Conteúdo da página
 
-| Listagem | Quantidade | Informações por item |
-| --- | --- | --- |
-| Catálogo de álbuns | 10 álbuns | Capa, nome do álbum, banda, ano de lançamento e gênero |
-| Bandas em destaque | 3 artistas | Foto, nome e descrição curta |
+| Listagem | Quantidade | Informações exibidas |
+| --- | ---: | --- |
+| Álbuns para descobrir | 10 álbuns | Capa, título, banda, gênero, ano e favorito |
+| Bandas em destaque | 3 bandas | Foto, nome e descrição |
 
-A página terá cabeçalho, área de destaque, catálogo de álbuns, bandas em destaque e rodapé.
+A página também possui cabeçalho com navegação, área de destaque, filtros visuais de gênero e rodapé.
 
-## Layout responsivo
+## Responsividade
 
-O planejamento segue a abordagem mobile first.
+O layout foi desenvolvido com abordagem **mobile first**, usando CSS e media queries:
 
 | Tela | Organização |
 | --- | --- |
-| Mobile — até 767 px | Menu hambúrguer, álbuns em uma coluna e bandas abaixo do catálogo |
-| Tablet — de 768 a 1023 px (`md:`) | Links de navegação visíveis, álbuns em duas colunas e bandas lado a lado |
-| Desktop — a partir de 1024 px (`lg:`) | Álbuns em três colunas à esquerda e bandas em uma barra lateral à direita |
+| Mobile — até 767 px | Menu recolhido, álbuns em uma coluna e bandas abaixo do catálogo |
+| Tablet — a partir de 768 px | Navegação visível, álbuns em duas colunas e bandas lado a lado |
+| Desktop — a partir de 1024 px | Álbuns em três colunas e bandas em uma barra lateral |
 
 ## Wireframes
 
-- [Mobile](docs/wireframe-mobile.png)
-- [Tablet](docs/wireframe-tablet.png)
-- [Desktop](docs/wireframe-desktop.png)
+- [Wireframe mobile](docs/wireframe-mobile.png)
+- [Wireframe tablet](docs/wireframe-tablet.png)
+- [Wireframe desktop](docs/wireframe-desktop.png)
 
-As imagens usam caixas cinzas e espaços reservados para capas e fotos.
+## Implementação da Fase 2
 
-## Interações planejadas
+Nesta fase:
 
-- Favoritar e desfavoritar álbuns, alterando o coração e o contador de favoritos.
-- Filtrar os álbuns por gênero musical.
-- Abrir e fechar o menu no celular.
+- toda a página foi construída no [`src/App.tsx`](src/App.tsx);
+- os cards das duas listagens foram escritos diretamente no JSX;
+- foram usados elementos semânticos, como `header`, `main`, `section` e `footer`;
+- os estilos estão em [`src/App.css`](src/App.css);
+- as cores, espaçamentos e tipografia foram organizados com variáveis CSS em `:root`;
+- a responsividade utiliza as media queries de `768px` e `1024px`;
+- os dados e os controles de favoritos e filtros são representações estáticas.
 
-Os controles são apenas representações visuais nesta fase. A interação com estado será implementada na Fase 3 com `useState`.
+A componentização, os vetores de dados e a interação com `useState` serão desenvolvidos na Fase 3. O carregamento de dados externos e o Tailwind CSS serão incluídos somente na Fase 4.
 
-## Tecnologias previstas
+## Tecnologias
 
-React, TypeScript, Tailwind CSS e Vite.
+- React
+- TypeScript
+- Vite
+- CSS
+
+## Como executar
+
+Pré-requisito: Node.js instalado.
+
+```bash
+npm install
+npm run dev
+```
+
+Depois, acesse a URL exibida pelo Vite no terminal.
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
 
 ## Etapas do desenvolvimento
 
 | Fase | Objetivo | Branch |
 | --- | --- | --- |
 | 1 — Wireframe | Planejar as versões mobile, tablet e desktop | `fase-1-wireframe` |
-| 2 — Página | Construir a interface no `App.tsx`, com os itens escritos diretamente no JSX | `fase-2-pagina` |
+| 2 — Página | Construir a interface no `App.tsx` usando JSX e CSS | `fase-2-pagina` |
 | 3 — Componentes | Criar componentes, tipos, vetores de dados e interação com estado | `fase-3-componentes` |
-| 4 — JSON | Carregar os álbuns com `fetch` em `useEffect`, incluindo estados de carregamento e erro | `fase-4-json` |
-
-Na Fase 4, os álbuns virão de um JSON externo à aplicação, e as bandas em destaque permanecerão em um vetor local. As instruções de execução e a fonte dos dados serão adicionadas ao README nas próximas etapas.
+| 4 — JSON e Tailwind | Carregar a listagem principal com `fetch` e migrar os estilos para Tailwind CSS | `fase-4-json` |
 
 ## Autor
 
