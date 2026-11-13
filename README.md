@@ -2,7 +2,7 @@
 
 O **Acervo Sonoro** é uma página única dedicada à música alternativa. A interface apresenta um catálogo de álbuns e uma seção de bandas em destaque, com foco em uma organização simples, responsiva e inspirada em um acervo musical.
 
-**Etapa atual:** Fase 2 — construção da página com React, TypeScript, JSX e CSS.
+**Etapa atual:** Fase 3 — componentes, dados e estado com React, TypeScript e CSS.
 
 ## Conteúdo da página
 
