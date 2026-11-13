@@ -7,7 +7,7 @@ import { FilterList, type Filter } from "./components/FilterList";
 import { AlbumGrid } from "./components/AlbumGrid";
 import { BandList } from "./components/BandList";
 import { Footer } from "./components/Footer";
-import { ALBUMS, BANDS } from "./components/data";
+import { ALBUMS, BANDS } from "./data/catalog";
 
 function App() {
   const [favorites, setFavorites] = useState<string[]>([]);

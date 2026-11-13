@@ -1,4 +1,4 @@
-import type { Album, Band } from "./types";
+import type { Album, Band } from "../components/types";
 
 export const ALBUMS: Album[] = [
   {
